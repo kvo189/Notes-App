@@ -5,6 +5,16 @@ import ls from 'local-storage';
 import ReactMarkdown from "react-markdown/with-html";
 import './App.css';
 
+class Navbar extends React.Component {
+  render (){
+    return (
+      <div className="navbar">
+        <a href="https://github.com/kvo189/notes-app">View On Github</a>
+      </div>
+    );
+  }
+}
+
 class Note extends React.Component {
   constructor(props) {
     super(props);
@@ -116,21 +126,25 @@ class App extends React.Component {
     ));
     return (
       <div className="App">
-        <header className="App-header">
-          React Markdown Notes Taking App
-        </header>
-  
-        <button onClick={this.handleCreateNote} style={{marginTop: "10px"}}>
-          Create Note
-        </button>
-        
-        <div className="notes-container">
-          {notes}
+        <Navbar/>
+
+        <div className="App-body">
+          <header className="App-header">
+            React Markdown Notes Taking App
+          </header>
+          <button onClick={this.handleCreateNote} style={{marginTop: "10px"}}>
+            Create Note
+          </button>
+          <div className="notes-container">
+            {notes}
+          </div>
         </div>
       </div>
     );
   }
 }
+
+
 
 export default App;
 
