@@ -34,12 +34,11 @@
 }
 
 .App-body {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .notes-container {
-  max-width: 95%;
-  width: 580px;
+  width: auto;
   margin: 8px;
 }
 
